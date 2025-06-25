@@ -1,0 +1,35 @@
+{
+  "name": "z3-debugger",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "devDependencies": {
+    "@types/chrome-remote-interface": "^0.31.14",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.101.0",
+    "mocha": "^11.7.1",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@vscode/debugadapter": "^1.68.0",
+    "@vscode/debugprotocol": "^1.68.0",
+    "chrome-debugging-client": "^2.0.0",
+    "chrome-remote-interface": "^0.33.3"
+  },
+  "contributes": {
+    "debuggers": [
+      {
+        "type": "mydbg",
+        "label": "Z3 Debugger",
+        "program": "./out/debugadapter.js",
+        "runtime": "node",
+        "languages": [
+          "javascript",
+          "typescript"
+        ]
+      }
+    ]
+  }
+}
